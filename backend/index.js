@@ -1,24 +1,23 @@
-//import modules
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+const auctionRoutes = require("./routes/auctionRoutes");
 
 const app = express();
-const port = 3000;
+app.use(express.json());
 
-//middleware
-app.use(cors());
-app.use(bodyParser.json());
+// Connect to MongoDB
+mongoose
+  .connect("mongodb://localhost:27017/auctionDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log(err));
 
-//use routes
+// Use the auction routes
+app.use("/api/auctions", auctionRoutes);
 
-//print hello world
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
-//start server
+const port = 5000;
 app.listen(port, () => {
-  console.log(`Server is running http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
