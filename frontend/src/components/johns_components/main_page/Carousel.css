@@ -1,0 +1,8 @@
+/* Custom styles for the carousel */
+.carousel-container {
+  padding-bottom: 50px; /* Adjust this value to ensure enough space for the dots */
+}
+
+.carousel-indicators {
+  bottom: -20px; /* Adjust this value to move the dots above the footer */
+}

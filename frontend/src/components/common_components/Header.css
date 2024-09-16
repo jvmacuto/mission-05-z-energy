@@ -4,7 +4,6 @@
 .header {
   background-color: #333;
   padding: 1rem;
-  text-align: center;
 }
 
 .header-title {
@@ -14,18 +13,27 @@
 }
 
 .navbar {
-  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-list {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
+  margin: 0;
+  margin-left: 2rem; /* Add space between "My App" and the dropdowns */
 }
 
 .navbar-item {
   margin: 0 1rem;
+  position: relative;
 }
 
 .navbar-item a {
@@ -36,4 +44,121 @@
 
 .navbar-item a:hover {
   text-decoration: underline;
+}
+
+.dropdown-toggle::after {
+  content: " ▼";
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  margin-left: 0.5rem;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.action-button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+.search-bar-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.search-bar-container.show {
+  opacity: 1;
+  max-height: 100px; /* Adjust based on the height of the search bar */
+}
+
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+
+.search-bar-icon {
+  position: absolute;
+  left: 10px;
+  color: #ccc;
+}
+
+.long-search-bar {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
 }

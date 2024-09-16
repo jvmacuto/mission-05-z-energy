@@ -1,12 +1,35 @@
-/* Import Poppins font from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
-* {
-  /*set the margin, padding to 0*/
+/* Ensure the body and html take up the full height */
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  /*set the font family to sans-serif*/
-  font-family: sans-serif;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+
+/* Make the App component take up the full height */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure the main content area takes up the remaining space */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 7rem; /* Add padding to ensure content does not overlap with footer */
+}
+
+/* Optional: Style the footer */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Ensure the footer is positioned */
+  z-index: 1000; /* Ensure the footer is on top of other elements */
 }

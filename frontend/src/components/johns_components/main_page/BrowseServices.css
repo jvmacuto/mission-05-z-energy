@@ -1,0 +1,65 @@
+.browse-services-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+  text-align: center; /* Center the text within the container */
+}
+
+.browse-services-header {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.browse-services-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  max-width: 600px; /* Optional: Limit the width of the description */
+}
+
+.service-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap to the next line */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Space between the cards */
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Set a fixed width for the cards */
+  text-align: center;
+}
+
+.service-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-card-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.service-card-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.service-card-button:hover {
+  background-color: #0056b3;
+}
