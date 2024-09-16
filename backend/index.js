@@ -14,11 +14,16 @@ app.use(bodyParser.json());
 //use routes
 
 //print hello world
-app.get("/", (req, res) => {
-  res.send("Hello World");
+app.get("/api/endpoint", (req, res) => {
+  res.status(200).json({ data: "Hello World" });
 });
 
-//start server
-app.listen(port, () => {
-  console.log(`Server is running http://localhost:${port}`);
-});
+//export the app for testing
+module.exports = app;
+
+//start the server if this file is run directly
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Server is running http://localhost:${port}`);
+  });
+}

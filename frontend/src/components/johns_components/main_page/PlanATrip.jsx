@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "./PlanATrip.css";
+import { Link } from "react-router-dom";
 
 // Import marker icons
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
@@ -33,8 +34,10 @@ function PlanATrip() {
           along the way!
         </p>
         <div className="button-container">
-          <button className="btn btn-primary">Start Planning</button>
-          <button className="btn btn-secondary">Find Nearest Station</button>
+          <button className="btn btn-primary">Find a Station</button>
+          <Link to="/journey-planner">
+            <button className="btn btn-secondary">Plan your Journey</button>
+          </Link>
         </div>
       </div>
       <div className="map-container">
