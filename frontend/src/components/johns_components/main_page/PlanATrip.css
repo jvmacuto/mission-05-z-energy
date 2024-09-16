@@ -1,0 +1,68 @@
+.plan-a-trip-container {
+  display: flex;
+  flex-direction: row;
+  height: 75%; /* Adjust the height as needed */
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px 20px 20px 40px; /* Add left padding to move the text towards the center */
+  background-color: #f8f9fa; /* Light background color for text container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: flex-start; /* Align the content to the left */
+  text-align: left; /* Align the text to the left */
+}
+
+.text-container h1 {
+  font-size: 24px; /* Smaller font size for the heading */
+  margin-bottom: 10px; /* Space between heading and paragraphs */
+}
+
+.text-container p {
+  font-size: 16px; /* Smaller font size for the paragraphs */
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.map-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the map horizontally */
+  align-items: center; /* Center the map vertically */
+  background-color: #e9ecef; /* Light background color for map container */
+}
+
+.map-wrapper {
+  width: 80%; /* Adjust the width as needed */
+  height: 300px; /* Set a specific height for the map */
+  background-color: #fff; /* Optional: Add a background color */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
