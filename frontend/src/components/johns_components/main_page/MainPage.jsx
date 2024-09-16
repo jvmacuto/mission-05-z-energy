@@ -2,6 +2,8 @@ import React from "react";
 import Carousel from "./Carousel";
 import PLanATrip from "./PlanATrip";
 import BrowseServices from "./BrowseServices";
+import PowerYourHome from "./PowerYourHome";
+import ExclusiveRewards from "./ExclusiveRewards";
 
 function MainPage() {
   return (
@@ -9,6 +11,8 @@ function MainPage() {
       <Carousel />
       <PLanATrip />
       <BrowseServices />
+      <PowerYourHome />
+      <ExclusiveRewards />
     </div>
   );
 }
