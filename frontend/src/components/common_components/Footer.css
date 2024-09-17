@@ -1,6 +1,6 @@
 .footer {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Light text color */
+  background-color: white; /* Dark background color */
+  color: #ed560e; /* Light text color */
   padding: 20px;
   text-align: center;
 }
@@ -31,7 +31,7 @@
 }
 
 .footer-item a {
-  color: #fff; /* Light text color for links */
+  color: #ed560e; /* Light text color for links */
   text-decoration: none;
 }
 

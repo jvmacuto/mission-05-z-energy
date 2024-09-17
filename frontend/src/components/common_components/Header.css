@@ -2,8 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 .header {
-  background-color: #333;
-  padding: 1rem;
+  background-color: white;
+}
+
+.header-logo {
+  height: 7rem; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
 }
 
 .header-title {
@@ -33,11 +37,13 @@
 
 .navbar-item {
   margin: 0 1rem;
+  margin-right: 1.5rem; /* Add space between navbar items */
   position: relative;
 }
 
 .navbar-item a {
-  color: #fff;
+  color: black;
+  font-weight: bold;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
@@ -67,7 +73,7 @@
 
 .dropdown-menu a {
   display: block;
-  color: #fff;
+  color: black;
   padding: 0.5rem 1rem;
   text-decoration: none;
 }
@@ -79,18 +85,18 @@
 .navbar-actions {
   display: flex;
   align-items: center;
+  margin-right: 2rem;
 }
 
 .search-button {
-  padding: 0.5rem;
-  background-color: #007bff;
-  color: #fff;
+  background-color: transparent;
+  color: black;
   border: none;
-  border-radius: 0.25rem;
+  font-weight: 750;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: left; /* Align button text to the left */
 }
 
 .search-icon {
@@ -102,13 +108,14 @@
 }
 
 .action-button {
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #ed560e;
+  color: white;
   border: none;
-  border-radius: 0.25rem;
+  padding: 10px 20px;
+  font-weight: 750;
+  border-radius: 5px;
   cursor: pointer;
-  margin-right: 1rem;
+  text-align: left; /* Align button text to the left */
 }
 
 .action-button:hover {

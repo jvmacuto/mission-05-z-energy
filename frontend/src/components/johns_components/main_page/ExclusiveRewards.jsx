@@ -1,5 +1,6 @@
 import React from "react";
 import "./ExclusiveRewards.css";
+import image from "../../../../public/personusingapp.jpg";
 
 function ExclusiveRewards() {
   return (
@@ -13,7 +14,7 @@ function ExclusiveRewards() {
         <button>Find Out More</button>
       </div>
       <div className="image-container">
-        <img src="path/to/your/image.jpg" alt="Exclusive Rewards" />
+        <img src={image} alt="Exclusive Rewards" />
       </div>
     </div>
   );
