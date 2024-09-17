@@ -58,20 +58,20 @@
   text-align: center;
 }
 
-.btn-primary {
+.plan-a-trip-heading1 {
+  color: #ed560e;
+}
+
+.find-a-station {
   background-color: white; /* Change background color to white */
   color: #ed560e; /* Adjust text color to match the border */
   border: 2px solid #ed560e; /* Add border color */
   border-radius: 50px; /* Make the button oval-shaped */
 }
 
-.btn-secondary {
+.plan-your-journey {
   background-color: #ed560e; /* Change background color to white */
   color: white; /* Adjust text color to match the border */
   border: 2px solid #ed560e; /* Add border color */
   border-radius: 50px; /* Make the button oval-shaped */
-}
-
-.plan-a-trip-heading1 {
-  color: #ed560e;
 }

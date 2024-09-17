@@ -31,9 +31,9 @@ function PlanATrip() {
           along the way!
         </p>
         <div className="button-container">
-          <button className="btn btn-primary">Find a Station</button>
+          <button className="find-a-station">Find a Station</button>
           <Link to="/journey-planner">
-            <button className="btn btn-secondary">Plan your Journey</button>
+            <button className="plan-your-journey">Plan your Journey</button>
           </Link>
         </div>
       </div>
