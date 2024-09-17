@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/find-station" element={<FindAStation />} />
-            <Route path="/journey-planner" element={<JourneyPlannerPage />} />"
+            <Route path="/journey-planner" element={<JourneyPlannerPage />} />
           </Routes>
         </div>
         <Footer />
