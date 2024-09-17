@@ -3,7 +3,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
 const mapRoutes = require("./routes/mapRoutes");
+
+const userRouter = require("./routes/routes");
 
 const app = express();
 const port = 3000;
@@ -13,12 +16,20 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //use routes
-app.use('/map', mapRoutes.router)
+app.use("/map", mapRoutes.router);
 
-//print hello world
-app.get("/api/endpoint", (req, res) => {
-  res.status(200).json({ data: "Hello World" });
-});
+//connect to the database
+mongoose
+  .connect("mongodb://localhost:27017/coordinates")
+  .then(() => {
+    console.log("Connected to database");
+  })
+  .catch((err) => {
+    console.log("Error connecting to database", err);
+  });
+
+//routes
+app.use("/api", userRouter);
 
 //export the app for testing
 module.exports = app;

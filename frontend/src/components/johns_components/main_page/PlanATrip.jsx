@@ -1,34 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import { useState } from "react";
+
 import "./PlanATrip.css";
 import { Link } from "react-router-dom";
-
-// Import marker icons
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
-
-// Fix for default marker icon issue with Webpack
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
-
-const gasStations = [
-  { id: 1, name: "Z Station 1", position: [-36.8485, 174.7633] }, // Example coordinates for Auckland
-  { id: 2, name: "Z Station 2", position: [-41.2865, 174.7762] }, // Example coordinates for Wellington
-  { id: 3, name: "Z Station 3", position: [-43.5321, 172.6362] }, // Example coordinates for Christchurch
-];
+import axios from "axios";
+import "leaflet/dist/leaflet.css";
 
 function PlanATrip() {
+  const [coordinates, setCoordinates] = useState([]);
+
+  useEffect(() => {
+    const fetchCoordinates = async () => {
+      try {
+        const response = await axios.get("/api/getCoordinates");
+        setCoordinates(response.data);
+      } catch (err) {
+        console.log("Error fetching coordinates: ", err);
+      }
+    };
+    fetchCoordinates();
+  });
   return (
     <div className="plan-a-trip-container">
       <div className="text-container">
-        <h1>Looking to get fuelled up?</h1>
+        <h1 className="plan-a-trip-heading1">Looking to get fuelled up?</h1>
         <p>
           Plan your trips using our Journey Planner and see the nearest stations
           along the way!
@@ -51,11 +48,14 @@ function PlanATrip() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            {gasStations.map((station) => (
-              <Marker key={station.id} position={station.position}>
-                <Popup>{station.name}</Popup>
+            {/*{coordinates.map((coordinate) => (
+              <Marker
+                key={coordinate._id}
+                position={[coordinate.latitude, coordinate.longitude]}
+              >
+                <Popup>{coordinate.description}</Popup>
               </Marker>
-            ))}
+            ))}*/}
           </MapContainer>
         </div>
       </div>

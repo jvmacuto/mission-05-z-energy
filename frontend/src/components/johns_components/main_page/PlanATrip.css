@@ -2,26 +2,28 @@
   display: flex;
   flex-direction: row;
   height: 75%; /* Adjust the height as needed */
+  background-color: #f8f9fa;
 }
 
 .text-container {
   flex: 1;
   padding: 20px 20px 20px 40px; /* Add left padding to move the text towards the center */
-  background-color: #f8f9fa; /* Light background color for text container */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center the content vertically */
   align-items: flex-start; /* Align the content to the left */
   text-align: left; /* Align the text to the left */
+  margin-left: 5rem;
 }
 
 .text-container h1 {
-  font-size: 24px; /* Smaller font size for the heading */
+  font-size: 36px; /* Smaller font size for the heading */
+  font-weight: bold;
   margin-bottom: 10px; /* Space between heading and paragraphs */
 }
 
 .text-container p {
-  font-size: 16px; /* Smaller font size for the paragraphs */
+  font-size: 24px; /* Smaller font size for the paragraphs */
   margin-bottom: 10px; /* Space between paragraphs */
 }
 
@@ -35,7 +37,6 @@
   display: flex;
   justify-content: center; /* Center the map horizontally */
   align-items: center; /* Center the map vertically */
-  background-color: #e9ecef; /* Light background color for map container */
 }
 
 .map-wrapper {
@@ -58,11 +59,19 @@
 }
 
 .btn-primary {
-  background-color: #007bff;
-  color: white;
+  background-color: white; /* Change background color to white */
+  color: #ed560e; /* Adjust text color to match the border */
+  border: 2px solid #ed560e; /* Add border color */
+  border-radius: 50px; /* Make the button oval-shaped */
 }
 
 .btn-secondary {
-  background-color: #6c757d;
-  color: white;
+  background-color: #ed560e; /* Change background color to white */
+  color: white; /* Adjust text color to match the border */
+  border: 2px solid #ed560e; /* Add border color */
+  border-radius: 50px; /* Make the button oval-shaped */
+}
+
+.plan-a-trip-heading1 {
+  color: #ed560e;
 }
