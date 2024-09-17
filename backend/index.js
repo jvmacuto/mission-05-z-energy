@@ -1,23 +1,24 @@
+// index.js
 const express = require("express");
 const mongoose = require("mongoose");
-const auctionRoutes = require("./routes/auctionRoutes");
+const stationRoutes = require("./routes/stationRoutes");
 
 const app = express();
 app.use(express.json());
 
-// Connect to MongoDB
-mongoose
-  .connect("mongodb://localhost:27017/auctionDB", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log(err));
-
-// Use the auction routes
-app.use("/api/auctions", auctionRoutes);
-
-const port = 5000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+mongoose.connect("mongodb://localhost:27017/zenergy", {
+  serverSelectionTimeoutMS: 5000, // 5 seconds timeout
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
+
+// Define a route for the root path that returns 404
+app.get("/", (req, res) => {
+  res.status(404).send("Not Found");
+});
+
+// Use the station routes
+app.use("/api/stations", stationRoutes);
+
+// Export the app for testing
+module.exports = app;
