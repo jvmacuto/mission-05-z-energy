@@ -5,9 +5,11 @@
   padding: 20px;
   height: 45vh;
   background-color: #f8f9fa; /* Light background color */
-  border: 1px solid #ddd; /* Optional: Add a border */ /* Optional: Add rounded corners */
+  border: 1px solid #ddd; /* Optional: Add a border */
+  border-radius: 8px; /* Optional: Add rounded corners */
   width: 100%; /* Limit the width of the container */
   margin: 20px auto; /* Center the container horizontally */
+  background: linear-gradient(to right, #ed560e, #f8b500);
 }
 
 .text-container {
@@ -16,19 +18,35 @@
   padding: 0 20px 0 40px; /* Add padding to the left for spacing */
 }
 
-.icons-container {
-  display: flex;
-  gap: 20px; /* Space between icons */
+.text-container h2 {
+  color: white; /* Change the color of h2 to orange */
+  font-size: 36px;
+  font-weight: bold;
+}
+.power-your-name-p {
+  font-size: 20px;
+  color: white; /* Change the color of the paragraph text */
 }
 
-.icon {
-  font-size: 36px; /* Adjust the size of the icons */
+.icons-container {
   display: flex;
-  align-items: center; /* Center icons vertically */
-  justify-content: center; /* Center icons horizontally */
-  width: 50px; /* Set a fixed width for the icons */
-  height: 50px; /* Set a fixed height for the icons */
-  background-color: #ffffff; /* Background color for icons */
-  border-radius: 50%; /* Make icons circular */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  gap: 40px; /* Increase space between icons */
+  justify-content: flex-end; /* Align icons to the right */
+  flex: 1;
+  padding-right: 40px; /* Add padding to the right for spacing */
+  margin-right: 10rem;
+}
+
+.icons-container .fa-icon {
+  font-size: 4.5rem; /* Increase the size of the icons */
+}
+
+.text-container button {
+  margin-top: 1.5rem;
+  background-color: transparent; /* Change the background color of the button */
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
 }
