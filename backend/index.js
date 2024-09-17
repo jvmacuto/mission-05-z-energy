@@ -3,6 +3,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
+const mapRoutes = require("./routes/mapRoutes");
+
 const userRouter = require("./routes/routes");
 
 const app = express();
@@ -11,6 +14,9 @@ const port = 3000;
 //middleware
 app.use(cors());
 app.use(bodyParser.json());
+
+//use routes
+app.use("/map", mapRoutes.router);
 
 //connect to the database
 mongoose
