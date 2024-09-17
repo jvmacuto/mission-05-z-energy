@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [showSearchBar, setShowSearchBar] = useState(false);
@@ -64,7 +65,10 @@ function Header() {
           </ul>
         </div>
         <div className="navbar-actions">
-          <button className="action-button">Find A Station</button>
+          <Link to="/find-station">
+            <button className="action-button">Find A Station</button>
+          </Link>
+
           <button className="search-button" onClick={toggleSearchBar}>
             Search <i className="fas fa-search search-icon"></i>
           </button>
