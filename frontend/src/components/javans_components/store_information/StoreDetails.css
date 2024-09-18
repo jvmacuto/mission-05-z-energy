@@ -1,0 +1,64 @@
+/* Back link styling */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #7f8c8d;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Store name styling */
+.store-name {
+  font-family: "Inter", sans-serif;
+  font-size: 96px; /* Matches original design */
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Store address styling */
+.store-address {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Store contact styling */
+.store-contact {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Contact link styling */
+.store-contact a {
+  text-decoration: underline;
+  color: #000000;
+  font-weight: 400;
+}
+
+/* Button for directions */
+.get-directions-btn {
+  background: linear-gradient(90deg, #ed560e 0%, #ffa13a 100%);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.directions-icon {
+  margin-left: 10px;
+  font-size: 20px;
+}

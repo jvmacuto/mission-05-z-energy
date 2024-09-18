@@ -2,8 +2,7 @@ import React from "react";
 
 const Map = ({ location }) => {
   return (
-    <div className="map">
-      <h3>Location</h3>
+    <div className="map-container">
       <iframe
         src={`https://maps.google.com/maps?q=${location.lat},${location.lng}&z=15&output=embed`}
         width="600"

@@ -1,0 +1,81 @@
+.promotional-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 337px;
+  background-color: #fff;
+}
+
+.paymentoptions-line {
+  width: 100%;
+  border-top: 1px solid #e8e8e8; /* Light gray similar to footer line */
+  margin: 20px 0; /* Adjust margins for spacing */
+}
+
+.promo-section {
+  text-align: center;
+  width: 30%;
+}
+
+.promo-section h3 {
+  color: #3129ac;
+  font-family: Inter;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.26px;
+  text-align: left;
+}
+
+.promo-section p {
+  text-align: left;
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 181%;
+  letter-spacing: -0.15px;
+  margin-top: -10px;
+}
+
+.promo-button {
+  background: linear-gradient(90deg, #ed560e 0%, #ffa13a 100%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 208px;
+  height: 51px;
+}
+
+.promo-button .arrow {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-button svg {
+  width: 55px;
+  height: 53px;
+}
+
+.promo-button .arrow circle {
+  cx: 50%;
+  cy: 50%;
+  r: 11.5px;
+  fill: white;
+}
+
+.promo-button .arrow path {
+  transform: scale(0.8) translate(8px, 14px);
+  fill: #ed560e;
+}
+
+.promo-button:hover {
+  background-color: #ffa13a;
+}

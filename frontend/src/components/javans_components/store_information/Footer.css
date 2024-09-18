@@ -8,8 +8,8 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  padding-left: 280px;
-  padding-right: 280px;
+  padding-left: 350px;
+  padding-right: 100px;
 }
 
 .footer-section {
@@ -47,13 +47,27 @@
   text-decoration: underline;
 }
 
+/* Adjusted contact section */
 .contact-section .contact-us-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns text and icon to the left */
   border-radius: 32.5px;
   background: linear-gradient(90deg, #ed560e 0%, #ffa13a 100%);
-  padding: 10px 20px;
+  padding: 10px 30px;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  border: none;
+}
+
+.contact-section .contact-us-button span {
+  margin-right: 10px; /* Space between text and icon */
+}
+
+.contact-section .contact-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .social-icons {
@@ -68,24 +82,24 @@
 
 .footer-line {
   border-top: 1px solid #ccc;
-  margin: 0 100px 60px; /* Added more margin to move the links down */
+  margin: 0 0px 60px;
 }
 
 .footer-links-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 490px;
   font-size: 16px;
   letter-spacing: -0.16px;
-  margin-top: 160px;
+  margin-top: 50px;
 }
 
 .footer-links-bottom a {
   color: #000;
   text-decoration: none;
-  margin-right: 10px; /* Slightly reduce the space between the links */
-  margin-left: 10px; /* Adjust if needed for symmetry */
+  margin-left: -30px;
+  margin-right: 10px;
 }
 
 .footer-links-bottom a:hover {
@@ -95,14 +109,14 @@
 .footer-links-bottom p {
   font-size: 14px;
   color: #666;
-  margin-left: auto; /* This moves the <p> to the right */
+  margin-left: auto;
   text-align: right;
   margin: 0;
 }
 
 .social-icons {
   display: flex;
-  gap: 10px; /* Space between icons */
+  gap: 10px;
   margin-top: 10px;
 }
 
@@ -112,18 +126,36 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  background-color: #ed560e; /* Background color for icons */
-  border-radius: 50%; /* Make the icons circular */
-  color: white; /* Icon color */
+  background-color: #ed560e;
+  border-radius: 50%;
+  color: white;
   text-decoration: none;
 }
 
 .social-icons svg {
-  width: 100%; /* Adjust icon size to fit the container */
+  width: 100%;
   height: 100%;
 }
 
-/* Responsive Design */
+.contact-section .contact-us-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns text and icon to the left */
+  border-radius: 32.5px;
+  background: linear-gradient(90deg, #ed560e 0%, #ffa13a 100%);
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-section .icon-container {
+  margin-left: 10px; /* Add spacing to the right of the text */
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 1024px) {
   .footer-container {
     flex-direction: column;
@@ -138,11 +170,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 20px; /* Ensure margin is reduced on smaller screens */
+    margin-top: 20px;
   }
 
   .footer-links-bottom a {
     margin-bottom: 10px;
-    margin-right: 0; /* Remove right margin for centered alignment */
+    margin-right: 0;
   }
 }
