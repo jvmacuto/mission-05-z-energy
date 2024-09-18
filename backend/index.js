@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const mapRoutes = require("./routes/mapRoutes");
+
 
 const userRouter = require("./routes/routes");
 
@@ -16,7 +16,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //use routes
-app.use("/map", mapRoutes.router);
 
 //connect to the database
 mongoose
