@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 import "./PlanATrip.css";
 
 const containerStyle = {
@@ -16,21 +22,19 @@ const center = {
 
 function PlanATrip() {
   const [gasStations, setGasStations] = useState([]);
+  const [selectedStation, setSelectedStation] = useState(null);
 
-  // Function to fetch gas stations from the backend
   const getGasStations = async () => {
     try {
       const response = await axios.get(
         "http://localhost:3000/api/get-stations"
       );
       setGasStations(response.data);
-      console.log(gasStations);
     } catch (error) {
       console.error("Error fetching gas stations:", error);
     }
   };
 
-  // Fetch gas stations when the component mounts
   useEffect(() => {
     const fetchGasStations = async () => {
       await getGasStations();
@@ -69,8 +73,23 @@ function PlanATrip() {
                   lng: station.geometry.location.lng,
                 }}
                 title={station.name}
+                onClick={() => setSelectedStation(station)}
               />
             ))}
+            {selectedStation && (
+              <InfoWindow
+                position={{
+                  lat: selectedStation.geometry.location.lat,
+                  lng: selectedStation.geometry.location.lng,
+                }}
+                onCloseClick={() => setSelectedStation(null)}
+              >
+                <div>
+                  <h2>{selectedStation.name}</h2>
+                  <p>{selectedStation.vicinity}</p>
+                </div>
+              </InfoWindow>
+            )}
           </GoogleMap>
         </LoadScript>
       </div>

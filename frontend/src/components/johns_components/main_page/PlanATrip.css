@@ -48,32 +48,28 @@
 }
 
 .btn {
+  display: inline-block;
+  margin: 10px 5px;
   padding: 10px 20px;
-  font-size: 1em;
-  color: white;
-  background-color: #007bff; /* Bootstrap primary color */
+  font-size: 16px;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3; /* Darker shade of primary color */
+  text-align: center;
 }
 
 .plan-a-trip-heading1 {
   color: #ed560e;
 }
 
-.find-a-station {
+.button-container .find-a-station {
   background-color: white; /* Change background color to white */
   color: #ed560e; /* Adjust text color to match the border */
   border: 2px solid #ed560e; /* Add border color */
   border-radius: 50px; /* Make the button oval-shaped */
 }
 
-.plan-your-journey {
+.button-container .plan-your-journey {
   background-color: #ed560e; /* Change background color to white */
   color: white; /* Adjust text color to match the border */
   border: 2px solid #ed560e; /* Add border color */
