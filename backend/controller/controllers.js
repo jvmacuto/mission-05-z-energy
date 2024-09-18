@@ -55,7 +55,13 @@ const getGasStations = async (req, res) => {
   }
 };
 
+//function to display hello world
+const helloWorld = (req, res) => {
+  res.status(200).json({ message: "Hello World" });
+};
+
 module.exports = {
   fetchAndSaveGasStations,
   getGasStations,
+  helloWorld,
 };
