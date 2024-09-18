@@ -17,6 +17,7 @@ describe("GET /hello", () => {
   });
 });
 
+//John's test
 //test the controllers
 describe("controller checking", () => {
     it("should return 200 OK and 'Gas stations fetched and stored in database'", async () => {
@@ -34,6 +35,10 @@ describe("controller checking", () => {
         expect(res.body).toBeInstanceOf(Array);
     });
 });
+
+
+
+//end of John's tests
 
 afterAll(async () => {
   await mongoose.connection.close(); // Close the database connection
