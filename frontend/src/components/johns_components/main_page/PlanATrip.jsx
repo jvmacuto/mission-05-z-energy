@@ -1,27 +1,44 @@
-import React, { useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import { useState } from "react";
-
-import "./PlanATrip.css";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import axios from "axios";
-import "leaflet/dist/leaflet.css";
+import { Link } from "react-router-dom";
+import "./PlanATrip.css";
+
+const containerStyle = {
+  width: "100%",
+  height: "400px",
+};
+
+const center = {
+  lat: -40.9006, // Center of New Zealand
+  lng: 174.886,
+};
 
 function PlanATrip() {
-  const [coordinates, setCoordinates] = useState([]);
+  const [gasStations, setGasStations] = useState([]);
 
+  // Function to fetch gas stations from the backend
+  const getGasStations = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/api/get-stations"
+      );
+      setGasStations(response.data);
+      console.log(gasStations);
+    } catch (error) {
+      console.error("Error fetching gas stations:", error);
+    }
+  };
+
+  // Fetch gas stations when the component mounts
   useEffect(() => {
-    const fetchCoordinates = async () => {
-      try {
-        const response = await axios.get("/api/getCoordinates");
-        setCoordinates(response.data);
-      } catch (err) {
-        console.log("Error fetching coordinates: ", err);
-      }
+    const fetchGasStations = async () => {
+      await getGasStations();
     };
-    fetchCoordinates();
-  });
+
+    fetchGasStations();
+  }, []);
+
   return (
     <div className="plan-a-trip-container">
       <div className="text-container">
@@ -31,33 +48,31 @@ function PlanATrip() {
           along the way!
         </p>
         <div className="button-container">
-          <button className="find-a-station">Find a Station</button>
+          <button className="btn find-a-station">Find a Station</button>
           <Link to="/journey-planner">
-            <button className="plan-your-journey">Plan your Journey</button>
+            <button className="btn plan-your-journey">Plan your Journey</button>
           </Link>
         </div>
       </div>
       <div className="map-container">
-        <div className="map-wrapper">
-          <MapContainer
-            center={[-40.9006, 174.886] /* Center of New Zealand */}
-            zoom={5}
-            style={{ height: "100%", width: "100%" }}
+        <LoadScript googleMapsApiKey="AIzaSyBtdzx5ELApWo1_3H678plhHeCTDE7aBys">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={8}
           >
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            {/*{coordinates.map((coordinate) => (
+            {gasStations.map((station) => (
               <Marker
-                key={coordinate._id}
-                position={[coordinate.latitude, coordinate.longitude]}
-              >
-                <Popup>{coordinate.description}</Popup>
-              </Marker>
-            ))}*/}
-          </MapContainer>
-        </div>
+                key={station.place_id}
+                position={{
+                  lat: station.geometry.location.lat,
+                  lng: station.geometry.location.lng,
+                }}
+                title={station.name}
+              />
+            ))}
+          </GoogleMap>
+        </LoadScript>
       </div>
     </div>
   );

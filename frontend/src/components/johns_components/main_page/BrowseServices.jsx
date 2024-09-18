@@ -9,7 +9,7 @@ function BrowseServices() {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
         tempora magni facilis assumenda voluptates!
       </p>
-      <button className="btn btn-secondary">Product & Services</button>
+      <button className="btn product-and-services">Product & Services</button>
       <div className="service-cards-container">
         <div className="service-card">
           <img
