@@ -48,14 +48,18 @@
 }
 
 .btn {
-  display: inline-block;
-  margin: 10px 5px;
   padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  background-color: #007bff; /* Bootstrap primary color */
   border: none;
   border-radius: 5px;
-  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
 }
 
 .plan-a-trip-heading1 {
