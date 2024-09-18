@@ -31,6 +31,13 @@
   gap: 20px; /* Space between the cards */
 }
 
+.product-and-services {
+  background-color: #ed560e; /* Change background color to white */
+  color: white; /* Adjust text color to match the border */
+  border: 2px solid #ed560e; /* Add border color */
+  border-radius: 50px;
+}
+
 .service-card {
   background-color: #f9f9f9;
   border: 2px solid #ed560e; /* Add border color */
@@ -44,6 +51,7 @@
 .service-card-image {
   width: 100%;
   height: auto;
+  object-fit: cover;
   border-bottom: 2px solid #ed560e; /* Add border color between image and text */
   margin-bottom: 15px;
 }
