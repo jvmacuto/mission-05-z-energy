@@ -42,10 +42,18 @@ const getGeoLocation = async (req, res) => {
     console.error('Error:', error)
     res.status(500).json({error: 'Server error'})
   }}
+
+const getMaps = async (req, res) => {
+  require('dotenv').config();
+  const Google_Maps_API_Key = process.env.GOOGLE_MAPS_API_KEY;
+  const scriptURL = `https://maps.googleapis.com/maps/api/js?key=${Google_Maps_API_Key}&libraries=maps,marker&v=beta`; 
+  res.send(scriptURL);
+};
 //tajul's code ends here
 
 module.exports = {
   addCoordinate,
   getCoordinates,
   getGeoLocation,
+  getMaps,
 };
