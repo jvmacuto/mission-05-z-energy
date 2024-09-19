@@ -19,7 +19,7 @@ const fetchAndSaveGasStations = async (req, res) => {
   let allGasStations = [];
   try {
     do {
-      const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${radius}&type=${type}&keyword=${keyword}&key=${apiKey}&region=${region}${
+      const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=Z+Energy+gas+stations+in+New+Zealand&key=${apiKey}&region=${region}${
         nextPageToken ? `&pagetoken=${nextPageToken}` : ""
       }`;
       const response = await axios.get(url);
