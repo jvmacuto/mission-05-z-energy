@@ -1,4 +1,4 @@
-const Coordinate = require("../model/Coordinate");
+const getCoordinateModel = require("../model/Coordinate");
 
 const axios = require("axios");
 
@@ -46,8 +46,10 @@ const fetchAndSaveGasStations = async (req, res) => {
 };
 
 //Function to get gas stations from MongoDB
+// Function to get gas stations from MongoDB
 const getGasStations = async (req, res) => {
   try {
+    const Coordinate = await getCoordinateModel();
     const gasStations = await Coordinate.find({});
     res.json(gasStations);
   } catch (error) {
@@ -56,40 +58,34 @@ const getGasStations = async (req, res) => {
   }
 };
 
-
 //tajul's code
 const getGeoLocation = async (req, res) => {
-  require('dotenv').config();
+  require("dotenv").config();
   try {
-    const { lat, lng} = req.query
-    const Google_Maps_API_Key = process.env.GOOGLE_MAPS_API_KEY
+    const { lat, lng } = req.query;
+    const Google_Maps_API_Key = process.env.GOOGLE_MAPS_API_KEY;
     const geocodingURL = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${Google_Maps_API_Key}`;
     const response = await fetch(geocodingURL);
     const data = await response.json();
 
     if (data.status === "OK") {
-        res.json(data);
+      res.json(data);
     } else {
-        res.status(400).json({error: 'Geocoding error'});
+      res.status(400).json({ error: "Geocoding error" });
     }
   } catch (error) {
-    console.error('Error:', error)
-    res.status(500).json({error: 'Server error'})
-  }}
+    console.error("Error:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+};
 
 const getMaps = async (req, res) => {
-  require('dotenv').config();
+  require("dotenv").config();
   const Google_Maps_API_Key = process.env.GOOGLE_MAPS_API_KEY;
-  const scriptURL = `https://maps.googleapis.com/maps/api/js?key=${Google_Maps_API_Key}&libraries=maps,marker&v=beta`; 
+  const scriptURL = `https://maps.googleapis.com/maps/api/js?key=${Google_Maps_API_Key}&libraries=maps,marker&v=beta`;
   res.send(scriptURL);
 };
 //tajul's code ends here
-
-module.exports = {
-  addCoordinate,
-  getCoordinates,
-  getGeoLocation,
-  getMaps,
 
 //function to display hello world
 const helloWorld = (req, res) => {
@@ -101,6 +97,5 @@ module.exports = {
   getGasStations,
   helloWorld,
   getGeoLocation,
-  getMaps
-
+  getMaps,
 };

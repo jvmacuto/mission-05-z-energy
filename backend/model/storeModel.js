@@ -1,5 +1,5 @@
-// storeModel.js
 const mongoose = require("mongoose");
+const connectToDatabase = require("../db"); // Adjust the path as needed
 
 const storeSchema = new mongoose.Schema({
   name: String,
@@ -22,4 +22,9 @@ const storeSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Store", storeSchema);
+const getStoreModel = async () => {
+  const db = await connectToDatabase("zenergy");
+  return db.model("Store", storeSchema);
+};
+
+module.exports = getStoreModel;
