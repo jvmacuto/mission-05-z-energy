@@ -1,4 +1,5 @@
 const Coordinate = require("../model/Coordinate");
+
 const axios = require("axios");
 
 // John's code
