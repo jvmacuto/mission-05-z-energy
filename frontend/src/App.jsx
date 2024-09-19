@@ -6,7 +6,7 @@ import MainPage from "./components/johns_components/main_page/MainPage";
 import FindAStation from "./components/johns_components/find_a_station/FindAStation";
 import JourneyPlannerPage from "./components/johns_components/journey_planner/JourneyPlannerPage";
 import SimpleMarker from "./components/common_components/SimpleMarker";
-
+import StoreInformation from "./components/javans_components/store_information/StoreInformation";
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
             <Route path="/find-station" element={<FindAStation />} />
             <Route path="/journey-planner" element={<JourneyPlannerPage />} />
             <Route path="/simple-marker" element={<SimpleMarker />} />
+            <Route path="/store-information" element={<StoreInformation />} />
           </Routes>
         </div>
         <Footer />

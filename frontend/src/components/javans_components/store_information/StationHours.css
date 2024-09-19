@@ -1,0 +1,96 @@
+/* Adjusting overall store layout */
+.store-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Layout for the left column content */
+.left-column {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 20px; /* Space between elements */
+}
+
+/* Map settings */
+.map {
+  width: 100%;
+  height: 400px;
+}
+
+/* Full width for services and payment sections */
+.services-section,
+.payment-options-section {
+  grid-column: span 2; /* Span both columns */
+  margin-top: 40px;
+}
+
+/* Flex layout for station hours and fuel prices */
+.fuel-prices ul li,
+.station-hours ul li {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between day and hours */
+  margin-bottom: 10px;
+}
+
+/* Detailed flexbox settings for both sections */
+.fuel-prices .fuel-type,
+.station-hours .day-hours {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Styling the 'Station Hours' heading with more margin adjustments */
+.station-hours h3 {
+  font-size: 28px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #000;
+  line-height: 100%;
+  letter-spacing: -0.28px;
+  margin-left: 208px; /* Move the heading to the right */
+  margin-bottom: 90px; /* Adds space between heading and day/hours */
+  margin-top: 20px; /* Pushes the heading down slightly */
+}
+
+/* Flex layout for day/hours entries */
+.station-hours .day-hours {
+  display: flex; /* Align day and hours */
+  justify-content: space-between; /* Space between day and hours */
+  width: 60%; /* Adjust width for better alignment */
+  gap: 198px; /* Controls the gap between the day and opening hours */
+  margin-left: 120px;
+  margin-top: 90px; /* Reduce the gap between day/hours and heading */
+}
+
+/* Text styling for day names */
+.station-hours .day-hours span {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700; /* Bold for days */
+  line-height: 16px;
+  color: #000;
+}
+
+/* Normal font-weight for the opening hours */
+.station-hours .day-hours span:last-child {
+  font-weight: 400;
+}
+
+/* Resetting padding for both sections */
+.fuel-prices ul,
+.station-hours ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Flex settings for price and station hour entries */
+.fuel-prices li,
+.station-hours li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

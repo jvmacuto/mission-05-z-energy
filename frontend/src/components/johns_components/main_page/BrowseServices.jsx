@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import carWash from "../../../../public/car-wash.jpg";
 import trailer from "../../../../public/trailer.jpg";
+import { Link } from "react-router-dom";
 
 function BrowseServices() {
   useEffect(() => {
@@ -16,7 +17,9 @@ function BrowseServices() {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
         tempora magni facilis assumenda voluptates!
       </p>
-      <button className="btn product-and-services">Product & Services</button>
+      <Link to="/store-information">
+        <button className="btn product-and-services">Product & Services</button>
+      </Link>
       <div className="service-cards-container">
         <div className="service-card">
           <img src={carWash} alt="Service 1" className="service-card-image" />

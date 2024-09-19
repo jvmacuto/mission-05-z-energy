@@ -1,0 +1,89 @@
+.services-section {
+  padding: 20px;
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.services-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligns the content to the left */
+  margin-bottom: 20px;
+  margin-left: -220px; /* Adjusted this value to move it to the right */
+}
+
+.services-header h3 {
+  font-size: 35px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--Primary-color-01, #ed560e); /* Primary color */
+  margin-bottom: 15px; /* Adds space between heading and button */
+}
+
+.services-button {
+  background: linear-gradient(90deg, #ed560e 0%, #ffa13a 100%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Adds shadow effect */
+  margin-bottom: 70px;
+}
+
+.services-button .arrow {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Updated to stack categories vertically */
+.services-categories {
+  display: flex;
+  flex-direction: column; /* Stacks the categories vertically */
+  align-items: flex-start; /* Aligns content to the left */
+  gap: 0px; /* Reduces the gap between categories */
+  margin-top: -200px;
+  margin-left: 500px; /* Moved the categories to the right */
+}
+
+.services-category {
+  width: 100%; /* Makes each category take full width */
+}
+
+.services-category h4 {
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px; /* Reduces the space between heading and items */
+}
+
+.services-category ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 40px; /* Adjusts the gap between the links */
+}
+
+.services-category ul li {
+  display: inline-block;
+}
+
+.services-category ul li a {
+  color: #3129ac;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.services-category ul li a:hover {
+  text-decoration: underline;
+}

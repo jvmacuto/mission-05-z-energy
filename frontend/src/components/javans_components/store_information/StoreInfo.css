@@ -1,0 +1,258 @@
+/* Main store layout */
+.store-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left column layout */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between elements */
+}
+
+/* Map container styling */
+.map-container {
+  width: 100%;
+  height: 900px;
+  margin-top: -20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Adding a soft shadow for styling */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none; /* Removing border for a clean embedded map */
+  border-radius: 8px;
+}
+
+/* Full width for services and payment sections */
+.services-section,
+.payment-options-section {
+  grid-column: span 2; /* Spans both columns */
+  margin-top: 40px;
+}
+
+/* Flexbox layout for station hours and fuel prices */
+.fuel-prices ul li,
+.station-hours ul li {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  margin-bottom: 10px;
+}
+
+/* Detailed flexbox layout for both sections */
+.fuel-prices .fuel-type,
+.station-hours .day-hours {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensures full width usage */
+}
+
+/* Specific styling for Station Hours heading (h3) */
+.station-hours h3 {
+  font-size: 28px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #000;
+  line-height: 100%;
+  letter-spacing: -0.28px;
+  margin-left: 118px; /* Move the heading to the right */
+  margin-bottom: 20px; /* Space between heading and days */
+  padding-top: 10px; /* Use padding to lower the heading */
+  padding-bottom: 0; /* Ensure no extra padding at the bottom */
+}
+
+/* Day/hours entries with gap control */
+.station-hours .day-hours {
+  display: flex;
+  justify-content: space-between; /* Space between day and hours */
+  width: 60%;
+  gap: 198px; /* Control the gap between day and hours */
+  margin-left: 120px; /* Align content */
+  margin-top: 0; /* Remove extra margin above */
+}
+
+/* Text styling for days */
+.station-hours .day-hours span {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700; /* Bold days */
+  line-height: 16px;
+  color: #000;
+}
+
+/* Text styling for hours */
+.station-hours .day-hours span:last-child {
+  font-weight: 400; /* Normal font for hours */
+}
+
+/* Reset padding and margins for lists */
+.fuel-prices ul,
+.station-hours ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for individual list items */
+.fuel-prices li,
+.station-hours li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-left: -100px;
+  text-align: left;
+}
+
+/* Fuel prices styling */
+.fuel-prices ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Align the fuel types in a row */
+  justify-content: space-between;
+  margin-left: 500px;
+}
+
+.fuel-prices li {
+  text-align: left;
+}
+
+.fuel-type {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.fuel-type span:first-child {
+  font-family: "Inter", sans-serif;
+  font-size: 32px; /* Matches the size for fuel type names */
+  font-weight: 800;
+  color: #cd3636; /* Color for Premium */
+  margin-left: -290px;
+}
+
+.fuel-type span:last-child {
+  font-family: "Inter", sans-serif;
+  font-size: 24px; /* Size for price */
+  font-weight: 700;
+  color: #000; /* Black for prices */
+  margin-left: -290px;
+}
+
+.fuel-prices .price {
+  margin-top: 10px; /* Add space between fuel name and price */
+}
+
+.fuel-type img {
+  margin-bottom: 10px; /* Add space between the logo and the fuel name */
+  width: 80px; /* Adjust width for fuel logo */
+  height: auto;
+}
+
+/* Extra details for fuel payment methods */
+.fuel-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.fuel-extra h3 {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #000;
+  margin-left: 120px;
+}
+
+.fuel-extra .fuel-payment-methods {
+  display: flex;
+  gap: 30px; /* Add spacing between the payment options */
+  margin-right: 350px;
+}
+
+.fuel-extra span {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Back link styling */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #7f8c8d;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-left: 110px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Store name styling */
+.store-name {
+  font-family: "Inter", sans-serif;
+  font-size: 96px; /* Matches original design */
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 20px;
+  margin-left: 110px;
+}
+
+/* Store address styling */
+.store-address {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-left: 110px;
+}
+
+/* Store contact styling */
+.store-contact {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+  margin-left: 110px;
+}
+
+/* Contact link styling */
+.store-contact a {
+  text-decoration: underline;
+  color: #000000;
+  font-weight: 400;
+}
+
+/* Button for directions */
+.get-directions-btn {
+  background: linear-gradient(90deg, #ed560e 0%, #ffa13a 100%);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 650px;
+  margin-top: -10px;
+}
+
+.directions-icon {
+  margin-left: 10px;
+  font-size: 20px;
+}
