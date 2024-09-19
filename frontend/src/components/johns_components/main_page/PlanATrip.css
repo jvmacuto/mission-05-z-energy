@@ -1,0 +1,77 @@
+.plan-a-trip-container {
+  display: flex;
+  flex-direction: row;
+  height: 75%; /* Adjust the height as needed */
+  background-color: #f8f9fa;
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px 20px 20px 40px; /* Add left padding to move the text towards the center */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: flex-start; /* Align the content to the left */
+  text-align: left; /* Align the text to the left */
+  margin-left: 5rem;
+}
+
+.text-container h1 {
+  font-size: 36px; /* Smaller font size for the heading */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between heading and paragraphs */
+}
+
+.text-container p {
+  font-size: 24px; /* Smaller font size for the paragraphs */
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.map-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the map horizontally */
+  align-items: center; /* Center the map vertically */
+}
+
+.map-wrapper {
+  width: 80%; /* Adjust the width as needed */
+  height: 300px; /* Set a specific height for the map */
+  background-color: #fff; /* Optional: Add a background color */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.plan-a-trip-heading1 {
+  color: #ed560e;
+}
+
+.button-container .find-a-station {
+  background-color: white; /* Change background color to white */
+  color: #ed560e; /* Adjust text color to match the border */
+  border: 2px solid #ed560e; /* Add border color */
+  border-radius: 50px; /* Make the button oval-shaped */
+}
+
+.button-container .plan-your-journey {
+  background-color: #ed560e; /* Change background color to white */
+  color: white; /* Adjust text color to match the border */
+  border: 2px solid #ed560e; /* Add border color */
+  border-radius: 50px; /* Make the button oval-shaped */
+}

@@ -1,0 +1,54 @@
+.exclusive-rewards-container {
+  display: flex;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Center items vertically */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+
+  width: 100%; /* Limit the width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.exclusive-text-container {
+  margin-left: 5rem;
+  flex: 1;
+  text-align: left; /* Align text to the left */
+  padding: 0 20px 0 40px; /* Add padding to the left for spacing */
+}
+
+.exclusive-text-container h2 {
+  font-size: 2.5em; /* Increase the font size of h2 */
+  font-weight: bold;
+  color: #ed560e; /* Change the color of h2 to orange */
+  margin-bottom: 2rem;
+}
+
+.exclusive-text-container p {
+  font-size: 24px;
+  margin: 10px 0;
+  margin-bottom: 1.5rem;
+}
+
+.exclusive-text-container button {
+  background-color: #ed560e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.exclusive-text-container button:hover {
+  background-color: #0056b3; /* Change the background color on hover */
+}
+
+.image-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-container img {
+  width: 85%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+}

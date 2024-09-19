@@ -1,0 +1,69 @@
+.dropdown-container {
+  display: flex;
+  flex-direction: row; /* Arrange dropdowns and actions next to each other */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown-description {
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-button {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.dropdown-section:first-child .dropdown-button {
+  width: 450px; /* Increased width for the first dropdown */
+}
+
+.dropdown-section:nth-child(2) .dropdown-button,
+.dropdown-section:nth-child(3) .dropdown-button {
+  width: 250px; /* Increased width for the second and third dropdowns */
+}
+
+.actions {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row; /* Arrange button and paragraph next to each other */
+  gap: 10px;
+  align-items: center; /* Align items vertically */
+}
+
+.actions p {
+  margin-top: 1rem;
+}
+
+.add-filters-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-filters-button:hover {
+  background-color: #0056b3;
+}
+
+.clear-filters-paragraph {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.clear-filters-paragraph:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+.power-your-home-container {
+  display: flex;
+  justify-content: space-between; /* Space between text and icons */
+  align-items: center; /* Center items vertically */
+  height: 45vh;
+  background-color: #f8f9fa; /* Light background color */
+  width: 100%; /* Limit the width of the container */
+  background: linear-gradient(to right, #ed560e, #f8b500);
+}
+
+.text-container {
+  flex: 1;
+  text-align: left; /* Align text to the left */
+  padding: 0 20px 0 40px; /* Add padding to the left for spacing */
+}
+
+.text-container h2 {
+  color: white; /* Change the color of h2 to orange */
+  font-size: 36px;
+  font-weight: bold;
+}
+.power-your-name-p {
+  font-size: 20px;
+  color: white; /* Change the color of the paragraph text */
+}
+
+.icons-container {
+  display: flex;
+  gap: 40px; /* Increase space between icons */
+  justify-content: flex-end; /* Align icons to the right */
+  flex: 1;
+  padding-right: 40px; /* Add padding to the right for spacing */
+  margin-right: 10rem;
+}
+
+.icons-container .fa-icon {
+  font-size: 4.5rem; /* Increase the size of the icons */
+}
+
+.text-container button {
+  margin-top: 1.5rem;
+  background-color: transparent; /* Change the background color of the button */
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}

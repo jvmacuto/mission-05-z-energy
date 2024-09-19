@@ -1,0 +1,59 @@
+.banner {
+  background: linear-gradient(to right, #ed560e, #f8b500);
+  height: 35vh;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start; /* Align the container to the left */
+  align-items: center;
+}
+
+.banner-content {
+  display: flex;
+  margin-left: 5rem;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons-container .banner-button1 {
+  background-color: white; /* Change background color to white */
+  color: #ed560e; /* Adjust text color to match the border */
+  border: 2px solid #ed560e; /* Add border color */
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+
+.buttons-container .banner-button2 {
+  background-color: white; /* Change background color to white */
+  color: #ed560e; /* Adjust text color to match the border */
+  border: 2px solid #ed560e; /* Add border color */
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+
+.banner-button:hover {
+  background-color: #0056b3;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  width: 400px; /* Increased width to make the search bar longer */
+  margin-top: 10px; /* Add margin to create space between buttons and search bar */
+}
+
+.location-paragraph {
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 10px; /* Add margin to create space between search bar and paragraph */
+}
+
+.location-paragraph:hover {
+  text-decoration: underline;
+}
