@@ -1,0 +1,12 @@
+.map-component-container {
+  /* Add your container styles here */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.map-component-iframe {
+  /* Add your iframe styles here */
+  border: none;
+  width: 100%;
+  height: 450px;
+}

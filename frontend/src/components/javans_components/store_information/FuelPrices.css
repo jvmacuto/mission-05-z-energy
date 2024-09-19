@@ -1,42 +1,29 @@
-/* Fuel prices styling */
-.fuel-prices ul {
+.fuel-prices-container ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  display: flex; /* Align the fuel types in a row */
-  justify-content: space-between;
 }
 
-.fuel-prices li {
+.fuel-prices-item {
   text-align: center;
+  margin-bottom: 10px;
 }
 
-.fuel-type {
+.fuel-prices-type {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.fuel-type span:first-child {
+.fuel-prices-type span:first-child {
   font-family: "Inter", sans-serif;
   font-size: 32px; /* Matches the size for fuel type names */
   font-weight: 800;
   color: #cd3636; /* Color for Premium */
 }
 
-.fuel-type span:last-child {
+.fuel-prices-type span:last-child {
   font-family: "Inter", sans-serif;
   font-size: 24px; /* Size for price */
-  font-weight: 700;
-  color: #000; /* Black for prices */
-}
-
-.fuel-prices .price {
-  margin-top: 10px; /* Add space between fuel name and price */
-}
-
-.fuel-type img {
-  margin-bottom: 10px; /* Add space between the logo and the fuel name */
-  width: 80px; /* Adjust width for fuel logo */
-  height: auto;
+  font-weight: 600;
+  color: #333; /* Color for price */
 }

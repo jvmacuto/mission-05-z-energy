@@ -1,0 +1,18 @@
+.get-directions-container {
+  /* Add your container styles here */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.get-directions-link {
+  /* Add your link styles here */
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.get-directions-link:hover {
+  text-decoration: underline;
+}
