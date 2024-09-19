@@ -13,23 +13,6 @@
   gap: 20px; /* Spacing between elements */
 }
 
-/* Map container styling */
-.map-container {
-  width: 100%;
-  height: 900px;
-  margin-top: -20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Adding a soft shadow for styling */
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none; /* Removing border for a clean embedded map */
-  border-radius: 8px;
-}
-
 /* Full width for services and payment sections */
 .services-section,
 .payment-options-section {
