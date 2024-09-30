@@ -78,10 +78,10 @@ To run the tests for backend and frontend, follow the following:
 
 2. Frontend:
 
-   The frontend tests will be done using Cypress. Follow these steps to run Cypress tests:
+   The frontend tests will be done using Cypress on backend folder. Follow these steps to run Cypress tests:
 
    ```sh
-   cd frontend
+   cd backend
    npm install cypress@latest
    npx cypress run --spec "cypress/e2e/frontend.cy.js"
    ```
