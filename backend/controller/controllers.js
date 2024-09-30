@@ -1,5 +1,4 @@
 const getCoordinateModel = require("../model/Coordinate");
-
 const axios = require("axios");
 
 //load env
@@ -8,20 +7,14 @@ require("dotenv").config();
 // John's code
 // Function to fetch Z Energy gas stations from Google Maps API and save to MongoDB
 const fetchAndSaveGasStations = async (req, res) => {
-  const apiKey = process.env.API_KEY; // Replace with your actual API key
-  const center = {
-    lat: -40.9006, // Center of New Zealand
-    lng: 174.886,
-  };
-  const location = `${center.lat},${center.lng}`;
-  const radius = 50000; // 50 km radius for each request
-  const keyword = "Z";
-  const type = "gas_station";
+  const apiKey = "AIzaSyBtdzx5ELApWo1_3H678plhHeCTDE7aBys"; // Replace with your actual API key
+
   const region = "nz";
 
   let nextPageToken = null;
   let allGasStations = [];
   try {
+    const Coordinate = await getCoordinateModel();
     do {
       const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=Z+Energy+gas+stations+in+New+Zealand&key=${apiKey}&region=${region}${
         nextPageToken ? `&pagetoken=${nextPageToken}` : ""
@@ -48,7 +41,6 @@ const fetchAndSaveGasStations = async (req, res) => {
   }
 };
 
-//Function to get gas stations from MongoDB
 // Function to get gas stations from MongoDB
 const getGasStations = async (req, res) => {
   try {
