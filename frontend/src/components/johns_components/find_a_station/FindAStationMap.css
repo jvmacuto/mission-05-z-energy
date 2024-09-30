@@ -8,9 +8,8 @@
 .stations-list {
   width: 50%; /* 50% width for the stations list */
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: white;
   overflow-y: auto; /* Scroll if content overflows */
-
   margin-bottom: 20px;
   padding-left: 50px; /* Add padding to move text to the right */
 }
@@ -22,13 +21,62 @@
 }
 
 .stations-list ul {
-  list-style-type: none;
+  list-style-type: none; /* Remove bullet points */
   padding: 0;
+  text-decoration: none; /* Remove underline */
 }
 
 .stations-list li {
-  padding: 10px;
+  text-decoration: none; /* Ensure no underline on list items */
+}
+
+.stations-list > ul > li {
+  padding: 10px 0; /* Adjust padding for list items */
   border-bottom: 1px solid #ddd;
+}
+
+.station-day {
+  display: flex;
+  justify-content: space-between; /* Add space between day and hours */
+}
+
+.station-day .day-name {
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.station-day .day-hours {
+  flex: 1;
+  /* Align hours to the right */
+}
+
+.stations-list summary {
+  display: flex;
+  justify-content: space-between; /* Move arrow to the right */
+  cursor: pointer;
+  font-weight: bold;
+  color: #1e1968;
+  position: relative; /* Needed for the custom arrow */
+}
+
+.stations-list summary::marker {
+  content: ""; /* Hide the default marker */
+}
+
+.stations-list summary::after {
+  content: "▼"; /* Custom arrow symbol */
+  position: absolute;
+  left: 15%; /* Position it to the right */
+  transform: rotate(0deg); /* Default rotation */
+  transition: transform 0.2s; /* Smooth rotation transition */
+}
+
+.stations-list details[open] summary::after {
+  transform: rotate(-90deg); /* Rotate arrow when details are open */
+}
+
+.stations-list details {
+  margin-top: 15px; /* Increase space between details sections */
 }
 
 .tag-container {
@@ -46,7 +94,7 @@
   color: #333;
 }
 
-.fuel-prices {
+#fuel-prices {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;

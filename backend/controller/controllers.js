@@ -2,10 +2,13 @@ const getCoordinateModel = require("../model/Coordinate");
 
 const axios = require("axios");
 
+//load env
+require("dotenv").config();
+
 // John's code
 // Function to fetch Z Energy gas stations from Google Maps API and save to MongoDB
 const fetchAndSaveGasStations = async (req, res) => {
-  const apiKey = "AIzaSyBtdzx5ELApWo1_3H678plhHeCTDE7aBys"; // Replace with your actual API key
+  const apiKey = process.env.API_KEY; // Replace with your actual API key
   const center = {
     lat: -40.9006, // Center of New Zealand
     lng: 174.886,

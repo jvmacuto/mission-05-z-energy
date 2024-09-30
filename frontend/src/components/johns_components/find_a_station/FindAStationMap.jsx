@@ -60,7 +60,10 @@ const FindAStationMap = () => {
                     "Friday",
                     "Saturday",
                   ].map((day, idx) => (
-                    <li key={idx}>{day}</li>
+                    <li className="station-day" key={idx}>
+                      <span className="day-name">{day}</span>
+                      <span className="day-hours">24 Hours</span>
+                    </li>
                   ))}
                 </ul>
               </details>
@@ -81,7 +84,7 @@ const FindAStationMap = () => {
                 <summary>
                   <strong>Fuel Prices</strong>
                 </summary>
-                <ul className="fuel-prices">
+                <ul id="fuel-prices">
                   <li>ZX Premium: $2.50/L</li>
                   <li>Z91 Unleaded: $2.30/L</li>
                   <li>Z Diesel: $1.90/L</li>
